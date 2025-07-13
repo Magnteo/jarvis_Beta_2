@@ -12,6 +12,7 @@ from data_file_user import programs
 from return_file_user import *
 from exit_program import *
 from tasks_manager import task_menu
+from Weather import *
 from notepade_bookPhone import (
     load_contacts, 
     handle_contact_commands, 
@@ -147,7 +148,15 @@ def execute_command(command):
         
         elif any(c in command for c in ["відкрий список задач","список задач","задачі"]):
             task_menu()
-        
+        elif any(c in command for c in ["погода","яка погода"]):
+            response = requests.get(URL)
+            data =response.json()
+            if data.get("cod") !=200:
+                speak("Не можу отримати погоду зараз.")
+            weather_text = format_weather(data)
+            print(f"[JARVIS]:{weather_text}")
+            speak(weather_text)
+
         elif command == 'відкрий блокнот':
             os.system('start notepad')
 

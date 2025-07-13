@@ -3,17 +3,25 @@
 
 ## command :
     
-    Magnteo -- Bohdan Golovko 
+    Magnteo -- Bohdan Holovko 
 
     Heyzi12 -- Shiyan Maksym
 
-# Magteo's contribution:
-    Created the file "Jarvis.py" in it he created a voice assistant 
-    and added the commands time , turn off the PC , open notepad , turn on Spotify ,
-    turn on the browse , Created a file called notepade_bookPhone.py, which records a person's name and phone number and also validates the entered phone number.
-    For this file, I created a file_txt directory where all .txt files are stored.
-    I also created a new file called tasks_manager.py — it's a task list that allows assigning priorities to tasks, and I placed another .txt file specifically for this script.
-    Additionally, I improved the logic in Jarvis.py by adding various commands, fixed an issue when closing certain programs, and added a variety of responses for error handling.
+# Magneto contribution (EN):
+    Created the file "Jarvis.py" where he built a voice assistant
+    and added commands like time, shutdown PC, open notepad, launch Spotify,
+    and open browser.
+    Created notepade_bookPhone.py which saves a person’s name and phone number,
+    and also corrects phone input. For that file, created the file_txt folder
+    to store all .txt files.
+    Made a new tasks_manager.py file — a task list that allows setting task priorities,
+    and added another .txt file for that script.
+    Improved the logic in Jarvis.py with better command handling,
+    fixed the issue with closing programs, and added various error responses.
+    Also implemented weather voice reporting:
+    created a separate file that fetches real-time weather data using the OpenWeatherMap API,
+    extracts temperature, description, humidity, and wind speed,
+    and converts everything into speakable text
 
 
 # Heyzi12 contribution:
@@ -39,10 +47,17 @@
     
     Heyzi12 -- Шиян Максим
 
-# Magnteo вклад роботи:
-    Створив файл "Jarvis.py" у ньому він створив голосового асистента 
-    та додав команди час , виключи пк , відкрий блокнот , включи Spotify ,
-    включи браузер , створив файл notepade_bookPhone.py яка записує імя людини та її номер та кориктує введиний номер телефону ,для того файлу створив папку file_txt де зберігаються всі файли формату .txt ,створив новий файл tasks_manager.py  це список задач який ставить прірітети над задачею та помістив щеодин файл txt для цього скрипту,тріши порращив логіку у Jarvis.py  з різними командами ,пофіксив проблему при закривані якоїсь програми, добавив різнонанітні відповіді на помилки
+# Magneto вклад роботи:
+    Створив файл "Jarvis.py" у ньому він створив голосового асистента
+    та додав команди час, виключи пк, відкрий блокнот, включи Spotify,
+    включи браузер.
+    Створив файл notepade_bookPhone.py, який записує ім’я людини та її номер,
+    а також коригує введений номер телефону. Для цього файлу створив папку file_txt, де зберігаються всі файли формату .txt.
+    Створив новий файл tasks_manager.py — це список задач, який ставить пріоритети над задачею, та помістив ще один .txt файл для цього скрипту.
+    Покращив логіку у Jarvis.py з обробкою різних команд, пофіксив проблему при закриванні програм, добавив різноманітні відповіді на помилки.
+    Також реалізував озвучення погоди:
+    створив окремий файл, який отримує актуальні погодні дані через OpenWeatherMap API,
+    обробляє температуру, опис, вологість, швидкість вітру та перетворює все у зрозумілий для озвучення текст
 
 # Heyzi12 вклад роботи:
     переніс всі команди з файлу "Jarvis.py" в файл  "Jarvis_command_text.py" (Щоб зробити код в "Jarvis.py" меншим) ,
