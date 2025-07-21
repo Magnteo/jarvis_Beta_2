@@ -56,7 +56,11 @@ dict_respound ={
     "задачі": "replic",
     
     "погода":"replic",
-    "яка погода":"replic"
+    "яка погода":"replic",
+
+    "запис":"replic",
+
+
 }
 
 

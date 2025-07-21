@@ -11,18 +11,30 @@
     Created the file "Jarvis.py" where he built a voice assistant
     and added commands like time, shutdown PC, open notepad, launch Spotify,
     and open browser.
+
     Created notepade_bookPhone.py which saves a person’s name and phone number,
     and also corrects phone input. For that file, created the file_txt folder
     to store all .txt files.
+
     Made a new tasks_manager.py file — a task list that allows setting task priorities,
     and added another .txt file for that script.
-    Improved the logic in Jarvis.py with better command handling,
-    fixed the issue with closing programs, and added various error responses.
+
     Also implemented weather voice reporting:
     created a separate file that fetches real-time weather data using the OpenWeatherMap API,
     extracts temperature, description, humidity, and wind speed,
-    and converts everything into speakable text
+    and converts everything into speakable text.
 
+    Later, he refactored the project by splitting Jarvis.py into two separate modules:
+    Jarvis_fose_command.py — contains system commands like opening programs,
+    and jarvis_voice.py — responsible for capturing and processing voice input.
+
+    Developed jarvis_audio_module.py — a module for recording user voice commands.
+    It creates a "recordings" folder, listens to voice input, and saves the audio as a .wav file
+    until the user says "stop recording". The file names are numbered automatically,
+    and all steps are announced using the assistant’s voice.
+
+    Started integrating all assistant modules into one unified structure,
+    making the project modular and easier to maintain and expand.
 
 # Heyzi12 contribution:
     moved all commands from the file "Jarvis.py" to the file "Jarvis_command_text.py" (to make the code in "Jarvis.py" smaller),
@@ -38,6 +50,17 @@
 
 # Heyzi what is planned for the project:
 
+# Required Python Librarie:
+    pip install SpeechRecognition
+    pip install gTTS
+    pip install pygame
+    pip install requests
+    pip install colorama
+    pip install sounddevice
+    pip install simpleaudio
+    pip install numpy
+    pip install scipy
+
 # UA version
 # Проект Jarvis
 
@@ -48,16 +71,33 @@
     Heyzi12 -- Шиян Максим
 
 # Magneto вклад роботи:
-    Створив файл "Jarvis.py" у ньому він створив голосового асистента
-    та додав команди час, виключи пк, відкрий блокнот, включи Spotify,
-    включи браузер.
-    Створив файл notepade_bookPhone.py, який записує ім’я людини та її номер,
-    а також коригує введений номер телефону. Для цього файлу створив папку file_txt, де зберігаються всі файли формату .txt.
-    Створив новий файл tasks_manager.py — це список задач, який ставить пріоритети над задачею, та помістив ще один .txt файл для цього скрипту.
-    Покращив логіку у Jarvis.py з обробкою різних команд, пофіксив проблему при закриванні програм, добавив різноманітні відповіді на помилки.
+    Створив файл "Jarvis.py", у якому реалізував голосового асистента
+    та додав команди: показати час, вимкнути комп’ютер, відкрити блокнот, запустити Spotify,
+    відкрити браузер.
+
+    Створив файл notepade_bookPhone.py, який зберігає ім’я людини та її номер телефону,
+    а також коригує помилки у введеному номері. Для цього файлу створив папку file_txt
+    для зберігання всіх .txt файлів.
+
+    Створив новий файл tasks_manager.py — менеджер задач, який дозволяє встановлювати пріоритети,
+    та додав окремий .txt файл для збереження списку задач.
+
     Також реалізував озвучення погоди:
     створив окремий файл, який отримує актуальні погодні дані через OpenWeatherMap API,
-    обробляє температуру, опис, вологість, швидкість вітру та перетворює все у зрозумілий для озвучення текст
+    обробляє температуру, опис, вологість, швидкість вітру
+    і перетворює всю інформацію на текст, зручний для озвучення.
+
+    Згодом розділив головний файл Jarvis.py на два окремі модулі:
+    Jarvis_fose_command.py — містить команди типу «відкрий блокнот», «вимкни ПК» тощо,
+    та jarvis_voice.py — відповідає за прослуховування голосу й обробку команд.
+
+    Створив модуль jarvis_audio_module.py для запису голосу користувача.
+    Цей модуль створює папку "recordings", записує звук до команди "зупини запис",
+    зберігає його у форматі .wav з автоматичною нумерацією файлів
+    та озвучує усі етапи запису через функцію speak().
+
+    Розпочав об’єднання всіх модулів асистента в єдину структуру,
+    що зробило проєкт модульним, зручним для підтримки та подальшого розвитку.
 
 # Heyzi12 вклад роботи:
     переніс всі команди з файлу "Jarvis.py" в файл  "Jarvis_command_text.py" (Щоб зробити код в "Jarvis.py" меншим) ,
@@ -72,5 +112,16 @@
 # Magneto що заплановано на проєкт:
 
 # Heyzsi що заплановано на проєкт:
+
+# Необхідні Python-бібліотеки:
+    pip install SpeechRecognition
+    pip install gTTS
+    pip install pygame
+    pip install requests
+    pip install colorama
+    pip install sounddevice
+    pip install simpleaudio
+    pip install numpy
+    pip install scipy
 
 # version 1.0
