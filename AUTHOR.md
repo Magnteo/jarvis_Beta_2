@@ -35,6 +35,12 @@
 
     Started integrating all assistant modules into one unified structure,
     making the project modular and easier to maintain and expand.
+    
+    Added modern Microsoft Neural TTS via edge-tts for better speech quality.
+
+    Implemented audio playback with pygame to avoid opening external players.
+    Used asynchronous (async/await) approach for smoother speech processing.
+    Improved overall user experience — Jarvis now speaks more naturally and without pop-up windows.
 
 # Heyzi12 contribution:
     moved all commands from the file "Jarvis.py" to the file "Jarvis_command_text.py" (to make the code in "Jarvis.py" smaller),
@@ -60,7 +66,8 @@
     pip install simpleaudio
     pip install numpy
     pip install scipy
-
+    pip install rapidfuzz
+    pip install edge-tts
 # UA version
 # Проект Jarvis
 
@@ -101,6 +108,11 @@
 
     Додав алгоритм нечіткого пошуку (T9) для покращення розпізнавання команд, використовуючи бібліотеку rapidfuzz. Це дозволяє асистенту правильно розпізнавати команди навіть при помилках або неточностях у вимові.
 
+    Додали сучасний голос Microsoft Neural TTS через edge-tts для кращої якості озвучення.
+    Реалізували програвання звуку через pygame без відкриття зовнішніх плеєрів.
+    Використали асинхронність (async/await) для плавнішої роботи озвучення.
+    Покращили загальний користувацький досвід — Jarvis тепер говорить природніше і без зайвих вікон
+
 # Heyzi12 вклад роботи:
     переніс всі команди з файлу "Jarvis.py" в файл  "Jarvis_command_text.py" (Щоб зробити код в "Jarvis.py" меншим) ,
     створив файлм "programs_my_pc.py" і "search_file.py" для того щоб шукати чи є певний файл на компютері та створює файл "data_file_user.py" з шляхои до цих файлів , 
@@ -126,4 +138,5 @@
     pip install numpy
     pip install scipy
     pip install rapidfuzz
+    pip install edge-tts
 # version 1.0

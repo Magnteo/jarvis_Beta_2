@@ -1,11 +1,13 @@
 
 import speech_recognition as sr
-from gtts import gTTS
-import pygame
 import os
-import time
 from rapidfuzz import process
 from Jarvis_command_text import dict_respound
+import asyncio
+import edge_tts
+import tempfile
+import pygame
+import time
 r = sr.Recognizer()
 r.pause_threshold = 0.5
 def correct_command(user_text):
@@ -14,22 +16,25 @@ def correct_command(user_text):
     if best_match:
         cmd , score ,*_ =best_match
         print(f" Найближче: {cmd} (схожість: {score:.1f}%)")
-        if score >= 60:
+        if score >= 50:
             return cmd
     return None
-def speak(text):
-    tts = gTTS(text=text, lang='uk')
-    tts.save("voice.mp3")
-    pygame.init()
+
+VOICE = "uk-UA-OstapNeural"
+async def speak_async(text):
+    temp_file = os.path.join(tempfile.gettempdir(), "jarvis_voice.mp3")
+    communicate = edge_tts.Communicate(text, VOICE)
+    await communicate.save(temp_file)
     pygame.mixer.init()
-    pygame.mixer.music.load("voice.mp3")
+    pygame.mixer.music.load(temp_file)
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy():
         time.sleep(0.1)
-    pygame.mixer.music.stop()
     pygame.mixer.quit()
-    pygame.quit()
-    os.remove("voice.mp3")
+    
+
+def speak(text):
+    asyncio.run(speak_async(text))
 
 def listen_command():
     with sr.Microphone() as source:

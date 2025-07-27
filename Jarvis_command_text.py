@@ -61,7 +61,9 @@ dict_respound ={
 
     "запис":"replic",
 
+    "новини":"replic",
 
+    "завершити роботу":"replic"
 }
 
 

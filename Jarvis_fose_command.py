@@ -1,12 +1,9 @@
 # Команди які має виконати Джарвіс
-import subprocess
 import speech_recognition as sr
 from gtts import gTTS
-import pygame
 import os
-import time
+import sys
 from datetime import datetime
-import random
 from Jarvis_command_text import *
 from search_us_file import programs_my_pc as pmp
 from data_file_user import programs
@@ -14,7 +11,8 @@ from return_file_user import *
 from exit_program import *
 from tasks_manager import task_menu
 from Weather import *
-from jarvis_audio_module import start_recording_until_stop 
+from jarvis_audio_module import start_recording_until_stop
+from Jarvis_news import speak_news
 from notepade_bookPhone import (
     load_contacts, 
     handle_contact_commands, 
@@ -133,10 +131,15 @@ def execute_command(command):
         elif "запис" in command:
             start_recording_until_stop()
            
-
+        elif "новини" in command:
+            speak_news()
         elif command == 'відкрий блокнот':
             os.system('start notepad')
 
 
         elif command == 'відкрий браузер':
             os.startfile('https://www.google.com')
+
+        elif command =="завершити роботу":
+            speak("Завершую роботу. До зустрічі!")
+            sys.exit() 
