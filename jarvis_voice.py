@@ -4,10 +4,19 @@ from gtts import gTTS
 import pygame
 import os
 import time
-
+from rapidfuzz import process
+from Jarvis_command_text import dict_respound
 r = sr.Recognizer()
 r.pause_threshold = 0.5
-
+def correct_command(user_text):
+    keys = list(dict_respound.keys())
+    best_match = process.extractOne(user_text,keys)
+    if best_match:
+        cmd , score ,*_ =best_match
+        print(f" Найближче: {cmd} (схожість: {score:.1f}%)")
+        if score >= 60:
+            return cmd
+    return None
 def speak(text):
     tts = gTTS(text=text, lang='uk')
     tts.save("voice.mp3")

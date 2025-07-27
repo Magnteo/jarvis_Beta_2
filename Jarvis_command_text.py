@@ -32,7 +32,8 @@ dict_respound ={
 
     "відкрий spotify": "replic",
     "відкрий steam" : "replic",
-    "відкрий telegram" or "відкрий телеграм" : "replic",
+    "відкрий telegram": "replic",
+    "відкрий телеграм": "replic",
     "відкрий visual vtudio" or "відкрий vs" or "відкрий код" : "replic",
 
 
